@@ -6,4 +6,4 @@ def towersOfHanoi(numberOfDisks, startPeg=1, endPeg=3):
         towersOfHanoi(numberOfDisks-1,6-startPeg-endPeg,endPeg)
 
 
-towersOfHanoi(numberOfDisks=4)
+towersOfHanoi(numberOfDisks=10)

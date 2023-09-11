@@ -28,7 +28,23 @@ print(zeraImpar(123456789))
 
 #removePares
 #remove os dígitos pares do inteiro
+def removePares(n):
+    if n < 10:
+        return n if n % 2 else 0
+    elif n % 2:
+        return removePares(n // 10) * 10 + n % 10
+    return removePares(n // 10)
 
+print(removePares(123456789))
 
 #removeImpares
 #remove os dígitos ímpares do inteiro
+
+def removeImpar(n):
+    if n < 10:
+        return 0 if n % 2 else n
+    elif n % 2:
+        return removeImpar(n // 10)
+    return removeImpar(n // 10) * 10 + n % 10
+
+print(removeImpar(123456789))

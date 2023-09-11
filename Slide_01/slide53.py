@@ -56,4 +56,13 @@ print(qtdDigitos(9999))
 # SomaDigito
 # retorna a soma dos dígitos do inteiro
 
-#print("A soma dos números é ") 
+def somaDigitos(number):
+    return number if number < 10 else number % 10 + somaDigitos(number // 10)
+
+   
+print("A soma dos números é ") 
+print(somaDigitos(442))
+
+
+        
+    

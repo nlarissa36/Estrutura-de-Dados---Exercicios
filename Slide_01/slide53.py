@@ -3,8 +3,6 @@
 
 # Maior Digito
 # retorna o maior dígito do inteiro 
-
-
 def maiorDigito(n):
     if (n<10):
         return n
@@ -21,7 +19,6 @@ print(maiorDigito(238))
 
 # MenorDigito
 # retorna o menor dígito do inteiro
-
 def menorDigito(n):
     if (n<10):
         return n
@@ -37,25 +34,16 @@ print(menorDigito(238))
 
 # ContaDigito
 # retorna a quantidade de dígitos do inteiro
-
 def qtdDigitos(n):
-    cont = 1
-    if (n<10):
-        print("O número tem 1 digito")
-    else:
-        while(n>10):
-            n = n/10
-            cont = cont + 1
-        print("O número tem %d digitos "%cont)
+    return 1 if n < 10 else 1 + qtdDigitos(n // 10)
 
 
-
+print("A quantidade de digitos é: ")
 print(qtdDigitos(9999))
 
 
 # SomaDigito
 # retorna a soma dos dígitos do inteiro
-
 def somaDigitos(number):
     return number if number < 10 else number % 10 + somaDigitos(number // 10)
 
